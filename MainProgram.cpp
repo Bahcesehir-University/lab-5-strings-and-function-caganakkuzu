@@ -120,7 +120,7 @@ char MyString::charAt(int index) const {
     {
         throw std::out_of_range("Error");
     }
-    return charAt(index);
+    return data[index];
 }
 
 MyString MyString::substring(int start, int len) const {
