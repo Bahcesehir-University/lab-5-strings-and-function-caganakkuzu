@@ -126,11 +126,11 @@ char MyString::charAt(int index) const {
 MyString MyString::substring(int start, int len) const {
     // TODO: Return a substring starting at 'start' with length 'len'
     // Throw std::out_of_range if start is invalid (negative or >= length)
-    if (start < 0 || start >= data.length()) {
+    if (start < 0 || start >= (int)data.length()) {
         throw std::out_of_range("Error");
     }
-    // Hint: Use std::string::substr()
-    return substring(start, len);
+    std::string sub = data.substr(start, len);
+    return MyString(sub);
    
 }
 
