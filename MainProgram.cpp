@@ -156,7 +156,7 @@ MyString MyString::toLowerCase() const {
 
 MyString MyString::trim() const {
     size_t first = data.find_first_not_of(" \t\n\r");
-    if (string::npos == first) {
+    if (first == string::npos) {
         return MyString("");
     }
     size_t last = data.find_last_not_of(" \t\n\r");
